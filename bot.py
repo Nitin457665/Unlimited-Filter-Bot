@@ -2,7 +2,10 @@ import os
 import pyrogram
 
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
+    from config import Config
+
+bot_token = Config.BOT_TOKEN
+
 else:
     from config import Config
 
