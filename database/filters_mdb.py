@@ -8,8 +8,9 @@ else:
     from config import Config
  
 myclient = pymongo.MongoClient(Config.DATABASE_URI)
-mydb = myclient[Config.DATABASE_URI]
+mydb = myclient["mydatabase"]  # ← ismein 'mydatabase' ko apne real database name se replace karna
 
+DATABASE_URI = "mongodb+srv://cinemashor0:RYRUL115JCOM47R4@myfilterbot.cdxakym.mongodb.net/?retryWrites=true&w=majority&appName=MyFilterBot"
 
 
 async def add_filter(grp_id, text, reply_text, btn, file, alert):
