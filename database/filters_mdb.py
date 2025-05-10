@@ -8,7 +8,7 @@ else:
     from config import Config
  
 myclient = pymongo.MongoClient(Config.DATABASE_URI)
-mydb = myclient[Config.DATABASE_NAME]
+mydb = myclient[Config.DATABASE_URI]
 
 
 
